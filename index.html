@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero y sus armas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>⚔️ El Guerrero</h1>
+
+        <section class="personaje">
+            <div class="guerrero">🛡️</div>
+            <h2 id="nombreGuerrero">Ragnar</h2>
+            <p>Fuerza: <span id="fuerza">80</span></p>
+        </section>
+
+        <section class="arma">
+            <h2>Arma equipada</h2>
+            <div id="iconoArma" class="icono-arma">⚔️</div>
+            <p>Nombre: <strong id="nombreArma">Espada</strong></p>
+            <p>Daño: <strong id="danioArma">25</strong></p>
+        </section>
+
+        <section>
+            <h2>Elegí un arma</h2>
+            <div class="botones">
+                <button onclick="cambiarArma('espada')">
+                    ⚔️ Espada
+                </button>
+                <button onclick="cambiarArma('hacha')">
+                    🪓 Hacha
+                </button>
+                <button onclick="cambiarArma('lanza')">
+                    🔱 Lanza
+                </button>
+            </div>
+            <button class="atacar" onclick="atacar()">
+                ¡Atacar!
+            </button>
+            <p id="mensaje">El guerrero está preparado.</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
