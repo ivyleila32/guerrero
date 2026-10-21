@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 20px;
@@ -9,7 +8,7 @@ body {
 }
 
 .contenedor {
-    max-width: 600px;
+    max-width: 760px;
     margin: 20px auto;
     padding: 25px;
     background: #263449;
@@ -22,7 +21,8 @@ h1 {
 }
 
 .personaje,
-.arma {
+.arma,
+.circuito {
     margin: 20px 0;
     padding: 15px;
     background: #34465e;
@@ -30,12 +30,58 @@ h1 {
 }
 
 .guerrero {
-    font-size: 80px;
+    width: 110px;
+    margin: 0 auto 10px;
+}
+
+.guerrero svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
 }
 
 .icono-arma {
     font-size: 60px;
     margin: 10px;
+}
+
+.etapa {
+    display: inline-block;
+    padding: 3px 12px;
+    border: 1px solid #f5c76b;
+    border-radius: 99px;
+    color: #f5c76b;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 14px;
+    align-items: center;
+    text-align: left;
+    max-width: 360px;
+    margin: 14px auto 0;
+}
+
+.barra {
+    height: 10px;
+    background: #18212f;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.barra i {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #5cb85c;
+    transition: width 0.3s;
+}
+
+.barra.xp i {
+    background: #f5c76b;
 }
 
 .botones {
@@ -59,10 +105,23 @@ button:hover {
     background: #ffe09a;
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button.activo {
+    outline: 3px solid white;
+}
+
 .atacar {
     margin-top: 20px;
     background: #c94b4b;
     color: white;
+}
+
+.atacar:hover {
+    background: #de6666;
 }
 
 #mensaje {
@@ -70,3 +129,109 @@ button:hover {
     color: #f5c76b;
     font-weight: bold;
 }
+
+/* ===== Circuito ===== */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 4px;
+    aspect-ratio: 8 / 6;
+    padding: 6px;
+    background: #18212f;
+    border-radius: 12px;
+}
+
+.casilla {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    font-size: clamp(14px, 3.4vw, 26px);
+    background: #263449;
+    border: 1px solid #4a5d78;
+    border-radius: 6px;
+}
+
+.casilla.inicio {
+    background: #c94b4b;
+    font-size: clamp(9px, 1.8vw, 13px);
+    font-weight: bold;
+}
+
+.casilla.usada {
+    opacity: 0.35;
+    filter: grayscale(1);
+}
+
+.casilla.aqui {
+    outline: 3px solid #f5c76b;
+    z-index: 2;
+}
+
+.heroe {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    width: 130%;
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 3px 2px #0008);
+    animation: paso 0.22s ease-out;
+}
+
+.heroe svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+@keyframes paso {
+    50% { transform: translateX(-50%) translateY(-18%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heroe { animation: none; }
+}
+
+.centro {
+    grid-column: 2 / 8;
+    grid-row: 2 / 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dado {
+    font-size: clamp(28px, 7vw, 52px);
+    line-height: 1;
+}
+
+.leyenda {
+    font-size: 14px;
+    color: #b9c6d8;
+}
+
+#registro {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    max-height: 180px;
+    overflow: auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+#registro li {
+    padding: 4px 0;
+    border-bottom: 1px dashed #4a5d78;
+}
+
+#registro li.bien { color: #8fd69a; }
+#registro li.mal { color: #ff8e8e; }
+#registro li.evo { color: #f5c76b; font-weight: bold; }

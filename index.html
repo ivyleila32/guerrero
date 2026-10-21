@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,9 +11,17 @@
         <h1>⚔️ El Guerrero</h1>
 
         <section class="personaje">
-            <div class="guerrero">🛡️</div>
+            <div class="guerrero" id="muneco"></div>
             <h2 id="nombreGuerrero">Ragnar</h2>
-            <p>Fuerza: <span id="fuerza">80</span></p>
+            <span class="etapa" id="etapa">Aprendiz</span>
+            <div class="stats">
+                <span>Vida</span>
+                <div><div class="barra"><i id="barraVida"></i></div><small id="textoVida"></small></div>
+                <span>Experiencia</span>
+                <div><div class="barra xp"><i id="barraXp"></i></div><small id="textoXp"></small></div>
+                <span>Fuerza</span><strong id="fuerza">10</strong>
+                <span>Defensa</span><strong id="defensa">1</strong>
+            </div>
         </section>
 
         <section class="arma">
@@ -26,21 +33,16 @@
 
         <section>
             <h2>Elegí un arma</h2>
-            <div class="botones">
-                <button onclick="cambiarArma('espada')">
-                    ⚔️ Espada
-                </button>
-                <button onclick="cambiarArma('hacha')">
-                    🪓 Hacha
-                </button>
-                <button onclick="cambiarArma('lanza')">
-                    🔱 Lanza
-                </button>
-            </div>
-            <button class="atacar" onclick="atacar()">
-                ¡Atacar!
-            </button>
+            <div class="botones" id="botonesArmas"></div>
+            <button class="atacar" id="btnAtacar">¡Atacar!</button>
             <p id="mensaje">El guerrero está preparado.</p>
+        </section>
+
+        <section class="circuito">
+            <h2>El circuito</h2>
+            <div class="tablero" id="tablero"></div>
+            <p class="leyenda">⚔️ armas · 🧪 poción · 🛡️ armadura · 💪 amuleto · ✨ experiencia · 👹 enemigo</p>
+            <ul id="registro"></ul>
         </section>
     </main>
 
