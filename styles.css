@@ -1,237 +1,237 @@
 body {
-    margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background: #18212f;
-    color: white;
-    text-align: center;
+    margin: 0; /* Elimina el margen predeterminado del navegador. */
+    padding: 20px; /* Deja espacio entre el contenido y los bordes de la ventana. */
+    font-family: Arial, sans-serif; /* Define la tipografía general. */
+    background: #18212f; /* Colorea el fondo de toda la página. */
+    color: white; /* Define el color predeterminado del texto. */
+    text-align: center; /* Centra el texto de forma predeterminada. */
 }
 
 .contenedor {
-    max-width: 760px;
-    margin: 20px auto;
-    padding: 25px;
-    background: #263449;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px #0005;
+    max-width: 760px; /* Limita el ancho para mantener el contenido legible. */
+    margin: 20px auto; /* Centra el contenedor y separa sus bordes verticalmente. */
+    padding: 25px; /* Separa el contenido del borde del contenedor. */
+    background: #263449; /* Diferencia el panel principal del fondo. */
+    border-radius: 16px; /* Redondea las esquinas del panel. */
+    box-shadow: 0 5px 20px #0005; /* Agrega una sombra alrededor del panel. */
 }
 
 h1 {
-    color: #f5c76b;
+    color: #f5c76b; /* Resalta el título principal con el color dorado. */
 }
 
 .personaje,
 .arma,
 .circuito {
-    margin: 20px 0;
-    padding: 15px;
-    background: #34465e;
-    border-radius: 12px;
+    margin: 20px 0; /* Separa verticalmente las secciones del juego. */
+    padding: 15px; /* Deja espacio interior en cada sección. */
+    background: #34465e; /* Da un fondo propio a las secciones. */
+    border-radius: 12px; /* Redondea las esquinas de las secciones. */
 }
 
 .guerrero {
-    width: 110px;
-    margin: 0 auto 10px;
+    width: 110px; /* Define el ancho del dibujo del personaje. */
+    margin: 0 auto 10px; /* Centra el dibujo y deja espacio debajo. */
 }
 
 .guerrero svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    overflow: visible;
+    display: block; /* Evita el espacio extra de elementos SVG en línea. */
+    width: 100%; /* Ajusta el SVG al ancho de su contenedor. */
+    height: auto; /* Mantiene la proporción original del dibujo. */
+    overflow: visible; /* Permite ver partes del dibujo que sobresalen del SVG. */
 }
 
 .icono-arma {
-    font-size: 60px;
-    margin: 10px;
+    font-size: 60px; /* Agranda el icono del arma equipada. */
+    margin: 10px; /* Separa el icono de los elementos cercanos. */
 }
 
 .etapa {
-    display: inline-block;
-    padding: 3px 12px;
-    border: 1px solid #f5c76b;
-    border-radius: 99px;
-    color: #f5c76b;
-    font-size: 14px;
+    display: inline-block; /* Permite aplicar dimensiones y espaciado al rótulo. */
+    padding: 3px 12px; /* Agrega espacio alrededor del nombre de la etapa. */
+    border: 1px solid #f5c76b; /* Dibuja un borde dorado. */
+    border-radius: 99px; /* Redondea el rótulo para darle forma de etiqueta. */
+    color: #f5c76b; /* Colorea el texto de la etapa. */
+    font-size: 14px; /* Define el tamaño del texto de la etapa. */
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 8px 14px;
-    align-items: center;
-    text-align: left;
-    max-width: 360px;
-    margin: 14px auto 0;
+    display: grid; /* Organiza las etiquetas y los valores en una cuadrícula. */
+    grid-template-columns: auto 1fr; /* Ajusta la primera columna al texto y expande la segunda. */
+    gap: 8px 14px; /* Separa las filas y las columnas. */
+    align-items: center; /* Alinea verticalmente el contenido de cada fila. */
+    text-align: left; /* Alinea las estadísticas a la izquierda. */
+    max-width: 360px; /* Limita el ancho de las estadísticas. */
+    margin: 14px auto 0; /* Centra la cuadrícula y deja espacio superior. */
 }
 
 .barra {
-    height: 10px;
-    background: #18212f;
-    border-radius: 5px;
-    overflow: hidden;
+    height: 10px; /* Define el grosor de la barra de progreso. */
+    background: #18212f; /* Colorea el espacio todavía no completado. */
+    border-radius: 5px; /* Redondea los extremos de la barra. */
+    overflow: hidden; /* Recorta el relleno dentro de los bordes redondeados. */
 }
 
 .barra i {
-    display: block;
-    height: 100%;
-    width: 0;
-    background: #5cb85c;
-    transition: width 0.3s;
+    display: block; /* Permite controlar el tamaño del relleno. */
+    height: 100%; /* Hace que el relleno ocupe toda la altura de la barra. */
+    width: 0; /* Inicia vacía; JavaScript actualiza el ancho. */
+    background: #5cb85c; /* Colorea de verde el progreso de vida. */
+    transition: width 0.3s; /* Anima suavemente los cambios de progreso. */
 }
 
 .barra.xp i {
-    background: #f5c76b;
+    background: #f5c76b; /* Usa dorado para diferenciar la barra de experiencia. */
 }
 
 .botones {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: flex; /* Coloca los botones de armas en una fila flexible. */
+    justify-content: center; /* Centra los botones horizontalmente. */
+    flex-wrap: wrap; /* Permite que los botones pasen a otra fila si falta espacio. */
+    gap: 10px; /* Separa los botones entre sí. */
 }
 
 button {
-    padding: 12px 16px;
-    border: none;
-    border-radius: 8px;
-    background: #f5c76b;
-    color: #18212f;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 12px 16px; /* Define el espacio interior de cada botón. */
+    border: none; /* Quita el borde predeterminado del navegador. */
+    border-radius: 8px; /* Redondea las esquinas del botón. */
+    background: #f5c76b; /* Colorea el fondo del botón. */
+    color: #18212f; /* Colorea el texto del botón. */
+    font-weight: bold; /* Resalta el texto del botón. */
+    cursor: pointer; /* Indica que el botón es interactivo. */
 }
 
 button:hover {
-    background: #ffe09a;
+    background: #ffe09a; /* Aclara el botón cuando el puntero está encima. */
 }
 
 button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: 0.5; /* Atenúa visualmente los botones desactivados. */
+    cursor: not-allowed; /* Indica que no se puede pulsar el botón. */
 }
 
 button.activo {
-    outline: 3px solid white;
+    outline: 3px solid white; /* Marca el botón del arma actualmente equipada. */
 }
 
 .atacar {
-    margin-top: 20px;
-    background: #c94b4b;
-    color: white;
+    margin-top: 20px; /* Separa el botón de ataque de los botones de armas. */
+    background: #c94b4b; /* Distingue visualmente la acción de atacar. */
+    color: white; /* Mantiene legible el texto sobre el fondo rojo. */
 }
 
 .atacar:hover {
-    background: #de6666;
+    background: #de6666; /* Aclara el botón de ataque al pasar el puntero. */
 }
 
 #mensaje {
-    min-height: 24px;
-    color: #f5c76b;
-    font-weight: bold;
+    min-height: 24px; /* Reserva espacio para que la interfaz no salte al cambiar el mensaje. */
+    color: #f5c76b; /* Resalta los mensajes del juego. */
+    font-weight: bold; /* Hace que el mensaje sea más visible. */
 }
 
 /* ===== Circuito ===== */
 .tablero {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 4px;
-    aspect-ratio: 8 / 6;
-    padding: 6px;
-    background: #18212f;
-    border-radius: 12px;
+    display: grid; /* Distribuye las casillas en filas y columnas. */
+    grid-template-columns: repeat(8, 1fr); /* Crea ocho columnas iguales. */
+    grid-template-rows: repeat(6, 1fr); /* Crea seis filas iguales. */
+    gap: 4px; /* Separa las casillas entre sí. */
+    aspect-ratio: 8 / 6; /* Mantiene la proporción del tablero. */
+    padding: 6px; /* Separa las casillas del borde del tablero. */
+    background: #18212f; /* Colorea el fondo del tablero. */
+    border-radius: 12px; /* Redondea las esquinas del tablero. */
 }
 
 .casilla {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    font-size: clamp(14px, 3.4vw, 26px);
-    background: #263449;
-    border: 1px solid #4a5d78;
-    border-radius: 6px;
+    position: relative; /* Permite ubicar el personaje dentro de la casilla. */
+    display: flex; /* Centra el icono dentro de la casilla. */
+    align-items: center; /* Centra el contenido verticalmente. */
+    justify-content: center; /* Centra el contenido horizontalmente. */
+    min-width: 0; /* Evita que el contenido fuerce el ancho de la columna. */
+    font-size: clamp(14px, 3.4vw, 26px); /* Ajusta el tamaño del icono a la pantalla con límites. */
+    background: #263449; /* Colorea el fondo de cada casilla. */
+    border: 1px solid #4a5d78; /* Dibuja el borde de cada casilla. */
+    border-radius: 6px; /* Redondea ligeramente las esquinas. */
 }
 
 .casilla.inicio {
-    background: #c94b4b;
-    font-size: clamp(9px, 1.8vw, 13px);
-    font-weight: bold;
+    background: #c94b4b; /* Identifica la casilla de salida con color rojo. */
+    font-size: clamp(9px, 1.8vw, 13px); /* Ajusta el texto de salida a la pantalla. */
+    font-weight: bold; /* Resalta la etiqueta de salida. */
 }
 
 .casilla.usada {
-    opacity: 0.35;
-    filter: grayscale(1);
+    opacity: 0.35; /* Atenúa las casillas que ya no tienen objeto. */
+    filter: grayscale(1); /* Quita el color para distinguir las casillas usadas. */
 }
 
 .casilla.aqui {
-    outline: 3px solid #f5c76b;
-    z-index: 2;
+    outline: 3px solid #f5c76b; /* Resalta la casilla donde está el guerrero. */
+    z-index: 2; /* Muestra el resaltado por encima de las casillas vecinas. */
 }
 
 .heroe {
-    position: absolute;
-    left: 50%;
-    bottom: 6%;
-    width: 130%;
-    transform: translateX(-50%);
-    z-index: 5;
-    pointer-events: none;
-    filter: drop-shadow(0 3px 2px #0008);
-    animation: paso 0.22s ease-out;
+    position: absolute; /* Superpone al personaje sobre su casilla. */
+    left: 50%; /* Ubica el personaje en el centro horizontal. */
+    bottom: 6%; /* Alinea al personaje cerca del borde inferior. */
+    width: 130%; /* Hace el personaje ligeramente más grande que la casilla. */
+    transform: translateX(-50%); /* Centra el personaje respecto de su punto medio. */
+    z-index: 5; /* Dibuja al personaje por encima del contenido de la casilla. */
+    pointer-events: none; /* Deja que los clics atraviesen el dibujo. */
+    filter: drop-shadow(0 3px 2px #0008); /* Agrega una sombra para separar el dibujo del tablero. */
+    animation: paso 0.22s ease-out; /* Reproduce la animación al mover al guerrero. */
 }
 
 .heroe svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    overflow: visible;
+    display: block; /* Evita el espacio extra de SVG en línea. */
+    width: 100%; /* Ajusta el dibujo al ancho del personaje. */
+    height: auto; /* Conserva la proporción del dibujo. */
+    overflow: visible; /* Permite que el dibujo sobresalga de su caja. */
 }
 
 @keyframes paso {
-    50% { transform: translateX(-50%) translateY(-18%); }
+    50% { transform: translateX(-50%) translateY(-18%); } /* Eleva al personaje a mitad de la animación. */
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .heroe { animation: none; }
+    .heroe { animation: none; } /* Desactiva el movimiento para quien reduce animaciones. */
 }
 
 .centro {
-    grid-column: 2 / 8;
-    grid-row: 2 / 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    grid-column: 2 / 8; /* Ocupa las columnas centrales del tablero. */
+    grid-row: 2 / 6; /* Ocupa las filas centrales del tablero. */
+    display: flex; /* Distribuye verticalmente el dado y los controles. */
+    flex-direction: column; /* Coloca los elementos uno debajo del otro. */
+    align-items: center; /* Centra los elementos horizontalmente. */
+    justify-content: center; /* Centra los elementos verticalmente. */
+    gap: 10px; /* Separa el dado, el botón y el contador. */
 }
 
 .dado {
-    font-size: clamp(28px, 7vw, 52px);
-    line-height: 1;
+    font-size: clamp(28px, 7vw, 52px); /* Ajusta el tamaño del dado al tamaño de pantalla. */
+    line-height: 1; /* Evita espacio vertical adicional alrededor del dado. */
 }
 
 .leyenda {
-    font-size: 14px;
-    color: #b9c6d8;
+    font-size: 14px; /* Define el tamaño de la leyenda de iconos. */
+    color: #b9c6d8; /* Usa un color secundario para la leyenda. */
 }
 
 #registro {
-    list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
-    max-height: 180px;
-    overflow: auto;
-    text-align: left;
-    font-size: 14px;
+    list-style: none; /* Quita las viñetas predeterminadas de la lista. */
+    margin: 8px 0 0; /* Deja espacio entre el registro y la leyenda. */
+    padding: 0; /* Quita el espacio interior predeterminado de la lista. */
+    max-height: 180px; /* Limita la altura del registro. */
+    overflow: auto; /* Permite desplazarse por los mensajes si se llena. */
+    text-align: left; /* Alinea los mensajes del registro a la izquierda. */
+    font-size: 14px; /* Define el tamaño de los mensajes. */
 }
 
 #registro li {
-    padding: 4px 0;
-    border-bottom: 1px dashed #4a5d78;
+    padding: 4px 0; /* Separa cada mensaje de los bordes de su fila. */
+    border-bottom: 1px dashed #4a5d78; /* Divide visualmente las entradas del registro. */
 }
 
-#registro li.bien { color: #8fd69a; }
-#registro li.mal { color: #ff8e8e; }
-#registro li.evo { color: #f5c76b; font-weight: bold; }
+#registro li.bien { color: #8fd69a; } /* Colorea en verde los resultados positivos. */
+#registro li.mal { color: #ff8e8e; } /* Colorea en rojo los resultados negativos. */
+#registro li.evo { color: #f5c76b; font-weight: bold; } /* Resalta en dorado los mensajes de evolución. */

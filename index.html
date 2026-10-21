@@ -1,51 +1,59 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Declara que el documento usa HTML5. -->
+<html lang="es"> <!-- Indica que el idioma principal de la página es español. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guerrero y sus armas</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Permite mostrar correctamente tildes, eñes y emojis. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta el ancho de la página a la pantalla del dispositivo. -->
+    <title>Guerrero y sus armas</title> <!-- Define el texto que aparece en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Carga los estilos visuales desde el archivo CSS. -->
 </head>
 <body>
-    <main class="contenedor">
-        <h1>⚔️ El Guerrero</h1>
+    <main class="contenedor"> <!-- Contiene toda la interfaz principal del juego. -->
+        <h1>⚔️ El Guerrero</h1> <!-- Muestra el título del juego. -->
 
-        <section class="personaje">
-            <div class="guerrero" id="muneco"></div>
-            <h2 id="nombreGuerrero">Ragnar</h2>
-            <span class="etapa" id="etapa">Aprendiz</span>
-            <div class="stats">
-                <span>Vida</span>
-                <div><div class="barra"><i id="barraVida"></i></div><small id="textoVida"></small></div>
-                <span>Experiencia</span>
-                <div><div class="barra xp"><i id="barraXp"></i></div><small id="textoXp"></small></div>
-                <span>Fuerza</span><strong id="fuerza">10</strong>
-                <span>Defensa</span><strong id="defensa">1</strong>
+        <section class="personaje"> <!-- Agrupa el dibujo y las estadísticas del guerrero. -->
+            <div class="guerrero" id="muneco"></div> <!-- Aquí JavaScript dibuja al personaje. -->
+            <h2 id="nombreGuerrero">Ragnar</h2> <!-- Muestra el nombre actual del guerrero. -->
+            <span class="etapa" id="etapa">Aprendiz</span> <!-- Muestra su etapa de evolución. -->
+            <div class="stats"> <!-- Organiza las barras y los valores de estadísticas. -->
+                <span>Vida</span> <!-- Etiqueta de la estadística de vida. -->
+                <div> <!-- Contiene la barra y el texto de vida. -->
+                    <div class="barra"><i id="barraVida"></i></div> <!-- Barra cuyo ancho representa la vida disponible. -->
+                    <small id="textoVida"></small> <!-- Texto con la vida actual y máxima. -->
+                </div>
+                <span>Experiencia</span> <!-- Etiqueta de la estadística de experiencia. -->
+                <div> <!-- Contiene la barra y el texto de experiencia. -->
+                    <div class="barra xp"><i id="barraXp"></i></div> <!-- Barra cuyo ancho representa el progreso de experiencia. -->
+                    <small id="textoXp"></small> <!-- Texto con la experiencia y la próxima etapa. -->
+                </div>
+                <span>Fuerza</span> <!-- Etiqueta del valor de fuerza. -->
+                <strong id="fuerza">10</strong> <!-- Muestra la fuerza actual. -->
+                <span>Defensa</span> <!-- Etiqueta del valor de defensa. -->
+                <strong id="defensa">1</strong> <!-- Muestra la defensa actual. -->
             </div>
         </section>
 
-        <section class="arma">
-            <h2>Arma equipada</h2>
-            <div id="iconoArma" class="icono-arma">⚔️</div>
-            <p>Nombre: <strong id="nombreArma">Espada</strong></p>
-            <p>Daño: <strong id="danioArma">25</strong></p>
+        <section class="arma"> <!-- Presenta los datos del arma equipada. -->
+            <h2>Arma equipada</h2> <!-- Título de la sección del arma. -->
+            <div id="iconoArma" class="icono-arma">⚔️</div> <!-- Muestra el icono del arma actual. -->
+            <p>Nombre: <strong id="nombreArma">Espada</strong></p> <!-- Muestra el nombre del arma actual. -->
+            <p>Daño: <strong id="danioArma">25</strong></p> <!-- Muestra el daño del arma actual. -->
         </section>
 
-        <section>
-            <h2>Elegí un arma</h2>
-            <div class="botones" id="botonesArmas"></div>
-            <button class="atacar" id="btnAtacar">¡Atacar!</button>
-            <p id="mensaje">El guerrero está preparado.</p>
+        <section> <!-- Agrupa los controles para elegir arma y atacar. -->
+            <h2>Elegí un arma</h2> <!-- Indica la acción disponible con la mochila. -->
+            <div class="botones" id="botonesArmas"></div> <!-- JavaScript agrega aquí un botón por cada arma. -->
+            <button class="atacar" id="btnAtacar">¡Atacar!</button> <!-- Ejecuta el ataque del guerrero. -->
+            <p id="mensaje">El guerrero está preparado.</p> <!-- Muestra el resultado de las acciones. -->
         </section>
 
-        <section class="circuito">
-            <h2>El circuito</h2>
-            <div class="tablero" id="tablero"></div>
-            <p class="leyenda">⚔️ armas · 🧪 poción · 🛡️ armadura · 💪 amuleto · ✨ experiencia · 👹 enemigo</p>
-            <ul id="registro"></ul>
+        <section class="circuito"> <!-- Agrupa el tablero, su leyenda y el registro de sucesos. -->
+            <h2>El circuito</h2> <!-- Título del tablero de juego. -->
+            <div class="tablero" id="tablero"></div> <!-- JavaScript dibuja aquí las casillas y los objetos. -->
+            <p class="leyenda">⚔️ armas · 🧪 poción · 🛡️ armadura · 💪 amuleto · ✨ experiencia · 👹 enemigo</p> <!-- Explica el icono de cada objeto del tablero. -->
+            <ul id="registro"></ul> <!-- Lista los resultados de turnos, objetos y combates. -->
         </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app.js"></script> <!-- Carga la lógica del juego después de crear los elementos HTML. -->
 </body>
 </html>
